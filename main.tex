@@ -1,0 +1,219 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+\usepackage{ragged2e}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{June 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Roberto}{Sánchez Navarro}{Data Scientist - Data Analyst}{white}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \roundpic{profile.jpg} 
+\end{center}
+
+\vspace{1em}
+
+\infobubble{\faGithub}{cvgreen}{white}{\href{https://github.com/robertosanchezn/}{robertosanchezn}}
+
+\vspace{1em}
+
+\infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/robertosanchezn/}{robertosanchezn}}
+\vspace{2em}
+
+\bg{cvgreen}{white}{About me}\\[0.5em]
+\vspace{0.5em}
+
+Data Scientist looking for real-world challenges. Aspiring \textbf{Data Analyst} and \textbf{R/Python Developer} at CON\&SEL15. 
+\vspace{2em}
+
+I'm curious about the data, so I often take the extra step until it makes sense. Then, I like presenting it in a way that tells a story. 
+\vspace{2em}
+
+I'm continuously under training, learning new technologies every week, and when I pick one up, I enjoy passing that knowledge along to my peers. 
+
+
+
+\bigskip
+
+
+
+\bigskip
+
+\bg{cvgreen}{white}{Areas of specialization} \\[0.5em]
+\vspace{0.5em}
+
+Data Science ~•~ Data Analysis ~•~ Bioinformatics ~•~ Big Data
+
+\bigskip
+
+\bigskip
+
+\bg{cvgreen}{white}{Interests}\\[0.5em]
+\vspace{0.5em}
+
+ Running 
+~•~
+ Cycling 
+~•~
+ Hiking
+
+\vspace{3em}
+
+\bg{cvgreen}{white}{References}\\[0.5em]
+\vspace{0.5em}
+
+\faLinkedin  ~•~ \href{https://www.linkedin.com/in/jerodriguez23/}{Jonathan Rodríguez} ~•~ Senior Software Engineer ~•~ Minsait
+
+\vspace{0.5em}
+
+\faLinkedin~•~\href{https://www.linkedin.com/in/morten-kam-dahl-dueholm-22564518b/}{Morten Kam \\ Dahl Dueholm} ~•~ Associate Professor ~•~ Aalborg University
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Experience}
+
+\begin{tabular}{r| p{0.45\textwidth} c}
+    \cvevent{2022--2023}{PhD Candidate}{Aalborg University}{Denmark \color{cvred}}{Development of a python application for the detection and analysis of exopolysaccharide gene clusters in bacterial genomes and metagenomes.}{umu.jpg} \\
+    \cvevent{2021--2022}{Research Assistant}{Aalborg University}{Denmark \color{cvred}}{Genome mining and analysis of metagenome-assembled genomes from wastewater treatment plants.}{aau.png}
+\end{tabular}
+\vspace{2em}
+
+\begin{minipage}[t]{0.45\textwidth}
+\section*{Education}
+\begin{tabular}{r p{0.6\textwidth} c}
+    \cvdegree{2023-2024}{Big Data Analysis}{MSc.}{University of Murcia }{}{umu.jpg} \\
+    \cvdegree{2019-2021}{Biotechnology}{MSc.}{Aalborg University }{}{aau.png} \\
+    \cvdegree{2015-2019}{Biotechnology}{BSc.}{University of Murcia }{}{umu.jpg} \\
+    \cvdegree{2017-2018}{Exchange Year}{ISEP}{University of Tennessee}{}{umu.jpg}
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.25\textwidth}
+\section*{Programming}
+\begin{tabular}{rc @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{R} &{4 years} & \barrule{0.2}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{python} &{3 years} & \barrule{0.2}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{bash} &{3 years} &  \barrule{0.17}{0.5em}{cvgreen}\\
+     \bg{skilllabelcolour}{iconcolour}{\LaTeX}& {4 years} & \barrule{0.14}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{SQL}& {1 year\ } & \barrule{0.1}{0.5em}{cvgreen} \\
+\end{tabular}
+\end{minipage}
+
+\section*{Technical skills}
+\begin{tabular}{r|p{0.7\textwidth}}
+   \textbf{Databases}           & MySQL ~•~ MongoDB ~•~ HBase~•~ Neo4j   \\
+   \textbf{Data Wrangling}      & pandas ~•~ dplyr ~•~ tidyr ~•~ purrr \\
+   \textbf{Visualization}       & matplotlib ~•~ plotly~•~ ggplot2 ~•~ ggiraph ~•~ Shiny \\
+   \textbf{Reporting}           & R Markdown ~•~ jupyter ~•~ Google colab ~•~ Quarto \\
+   \textbf{Big Data}            & Hadoop ~•~ slurm ~•~ Spark ~•~ Snakemake \\
+   \textbf{Office Tools}        & Overleaf ~•~ Excel ~•~ PowerPoint ~•~ Slidy \\
+   \textbf{DB Clients}          & sqlalchemy~•~ pymongo ~•~ dbplyr ~•~ happybase \\
+   \textbf{Machine Learning}    & caret ~•~ e1071 ~•~ Keras ~•~ scikit-learn~•~ PyTorch (basic) \\
+   \textbf{Development}         & conda/mamba ~•~ Docker ~•~ Git \\
+   \textbf{Scraping}            & Scrapy ~•~ BeautifulSoup ~•~ rvest \\
+   \textbf{Other}               & regex ~•~ API integration (Requests \& httr) \\ 
+\end{tabular}
+
+\vspace{2em}
+
+\begin{minipage}[t]{0.3\textwidth}
+
+
+\section*{Languages}
+\begin{tabular}{l | ll}
+\textbf{English} & C1 (Advanced) + full \\
+&  professional proficiency \\
+\textbf{Spanish} & {Mother tongue} \\
+\textbf{French} & B1 Certificate \\
+\textbf{Danish} & Beginner \\
+\end{tabular}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.37\textwidth}
+\section*{Publications}
+\textbf{Sánchez-Navarro} et. al, 2022 \\ 
+Long-Read Metagenome-Assembled Genomes Improve Identification of Novel Complete Biosynthetic Gene Clusters in a Complex Microbial Activated Sludge Ecosystem. \textit{mSystems}. \href{https://doi.org/10.1128/msystems.00632-22}{10.1128/msystems.00632-22}
+\bigskip
+
+
+\end{minipage}
+
+\section*{Coding Courses}
+\begin{tabular}{r|ccc}
+2019 & DataCamp Career Track: & \textbf{Data Scientist with R} \\
+2021 & DataCamp Career Track: & \textbf{Python Programmer} \\
+\end{tabular}
+\bigskip
+
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Roberto Sánchez Navarro \icon{\faEnvelopeO}{cvgreen}{} robertosan97@gmail.com \icon{\faMapMarker}{cvgreen}{} Spain \icon{\faPhone}{cvgreen}{} +34 644 902 167 
+}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+\end{document}
