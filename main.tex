@@ -2,13 +2,15 @@
 % https://www.latextemplates.com/template/twenty-seconds-resumecv
 % https://www.latextemplates.com/template/friggeri-resume-cv
 
-\documentclass[lighthipster]{simplehipstercv}
+\documentclass[verylight]{simplehipstercv}
 % available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
 % withoutsidebar
 \usepackage[utf8]{inputenc}
 \usepackage[default]{raleway}
 \usepackage[margin=1cm, a4paper]{geometry}
-\usepackage{ragged2e}
+\usepackage{hyperref}
+\usepackage{fontawesome}
+
 
 
 %------------------------------------------------------------------ Variablen
@@ -32,7 +34,7 @@
 
 \section*{Start}
 
-\simpleheader{headercolour}{Roberto}{Sánchez Navarro}{Data Scientist - Data Analyst}{white}
+\simpleheader{headercolour}{Roberto}{Sánchez Navarro}{Bioinformatician - Data Analyst}{white}
 
 
 
@@ -47,7 +49,7 @@
 \begin{paracol}{2}
 \hbadness5000
 %\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
-
+\flushright
 \paracolbackgroundoptions
 
 % 0.9,0.9,0.9 -- 0.8,0.8,0.8
@@ -61,18 +63,26 @@
 
 \vspace{1em}
 
-\infobubble{\faGithub}{cvgreen}{white}{\href{https://github.com/robertosanchezn/}{robertosanchezn}}
+
+\infobubble{\faGithub}{cvgreen}{white}{\href{https://github.com/robertosanchezn/}{robertosanchezn}\href{https://github.com/robertosanchezn/}{ \faExternalLink} }
 
 \vspace{1em}
 
-\infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/robertosanchezn/}{robertosanchezn}}
-\vspace{2em}
+\infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/robertosanchezn/}{robertosanchezn}\href{https://www.linkedin.com/in/robertosanchezn/}{ \faExternalLink}}
+\vspace{1em}
+
+\infobubble{\faEnvelopeO}{cvgreen}{white}{robertosan97@gmail.com}
+\setlength{\parindent}{0pt}
+\vspace{1em}
+
+\infobubble{\faPhone}{cvgreen}{white}{+34 644 902 167}
+\setlength{\parindent}{0pt}
+\vspace{1em}
 
 \bg{cvgreen}{white}{About me}\\[0.5em]
 \vspace{0.5em}
 
-Data Scientist looking for real-world challenges. Aspiring \textbf{Data Analyst} and \textbf{R/Python Developer} at CON\&SEL15. 
-\vspace{2em}
+Bioinformatician looking for real-world challenges. 
 
 I'm curious about the data, so I often take the extra step until it makes sense. Then, I like presenting it in a way that tells a story. 
 \vspace{2em}
@@ -84,6 +94,16 @@ I'm continuously under training, learning new technologies every week, and when 
 \bigskip
 
 
+\bg{cvgreen}{white}{Soft skills} \\[0.5em]
+\vspace{0.5em}
+
+Attentive to detail
+
+Focused on quality
+
+Good communicator
+
+Highly motivated   
 
 \bigskip
 
@@ -107,14 +127,6 @@ Data Science ~•~ Data Analysis ~•~ Bioinformatics ~•~ Big Data
 
 \vspace{3em}
 
-\bg{cvgreen}{white}{References}\\[0.5em]
-\vspace{0.5em}
-
-\faLinkedin  ~•~ \href{https://www.linkedin.com/in/jerodriguez23/}{Jonathan Rodríguez} ~•~ Senior Software Engineer ~•~ Minsait
-
-\vspace{0.5em}
-
-\faLinkedin~•~\href{https://www.linkedin.com/in/morten-kam-dahl-dueholm-22564518b/}{Morten Kam \\ Dahl Dueholm} ~•~ Associate Professor ~•~ Aalborg University
 
 \phantom{turn the page}
 
@@ -127,8 +139,21 @@ Data Science ~•~ Data Analysis ~•~ Bioinformatics ~•~ Big Data
 \section*{Experience}
 
 \begin{tabular}{r| p{0.45\textwidth} c}
-    \cvevent{2022--2023}{PhD Candidate}{Aalborg University}{Denmark \color{cvred}}{Development of a python application for the detection and analysis of exopolysaccharide gene clusters in bacterial genomes and metagenomes.}{umu.jpg} \\
-    \cvevent{2021--2022}{Research Assistant}{Aalborg University}{Denmark \color{cvred}}{Genome mining and analysis of metagenome-assembled genomes from wastewater treatment plants.}{aau.png}
+       \cvevent{2022--2023}{PhD Candidate}{Aalborg University}{Denmark \color{cvred}}{
+       Development of a python application for the detection and analysis of exopolysaccharide gene clusters in bacterial metagenomes. This entailed:
+
+       \begin{itemize}
+           \item  Retrieving all exopolysaccharide clusters from the published literature and extracting all existing genetic knowledge about them. 
+
+       \item  Development of a Snakemake pipeline that uses DIAMOND, hmmer, biopython, and visualization tools, among others, to mine public genome databases to collect sequence data to train models. 
+
+       \item  Exploratory analysis of these sequences using the phylogenetic python suite ete3 to redefine the classification of these clusters. 
+       
+       \item Using all this knowledge to develop de novo HMMs to be used in the new application. 
+
+       \end{itemize}
+       }{aau.png} \\
+    \cvevent{2021--2022}{Research Assistant}{Aalborg University}{Denmark \color{cvred}}{Genome mining of metagenome-assembled genomes from wastewater treatment plants looking for biosynthetic gene clusters.}{aau.png}
 \end{tabular}
 \vspace{2em}
 
@@ -155,13 +180,14 @@ Data Science ~•~ Data Analysis ~•~ Bioinformatics ~•~ Big Data
 \section*{Technical skills}
 \begin{tabular}{r|p{0.7\textwidth}}
    \textbf{Databases}           & MySQL ~•~ MongoDB ~•~ HBase~•~ Neo4j   \\
+   \textbf{Bioinformatics}      & NGS ~•~ (meta)genomics ~•~ genome mining \\
    \textbf{Data Wrangling}      & pandas ~•~ dplyr ~•~ tidyr ~•~ purrr \\
    \textbf{Visualization}       & matplotlib ~•~ plotly~•~ ggplot2 ~•~ ggiraph ~•~ Shiny \\
    \textbf{Reporting}           & R Markdown ~•~ jupyter ~•~ Google colab ~•~ Quarto \\
    \textbf{Big Data}            & Hadoop ~•~ slurm ~•~ Spark ~•~ Snakemake \\
    \textbf{Office Tools}        & Overleaf ~•~ Excel ~•~ PowerPoint ~•~ Slidy \\
-   \textbf{DB Clients}          & sqlalchemy~•~ pymongo ~•~ dbplyr ~•~ happybase \\
-   \textbf{Machine Learning}    & caret ~•~ e1071 ~•~ Keras ~•~ scikit-learn~•~ PyTorch (basic) \\
+   \textbf{DB Clients}          & sqlalchemy ~•~ pymongo ~•~ dbplyr ~•~ happybase \\
+   \textbf{Machine Learning}    & caret ~•~ Keras ~•~ scikit-learn~•~ TensorFlow \\
    \textbf{Development}         & conda/mamba ~•~ Docker ~•~ Git \\
    \textbf{Scraping}            & Scrapy ~•~ BeautifulSoup ~•~ rvest \\
    \textbf{Other}               & regex ~•~ API integration (Requests \& httr) \\ 
@@ -185,16 +211,15 @@ Data Science ~•~ Data Analysis ~•~ Bioinformatics ~•~ Big Data
 \begin{minipage}[t]{0.37\textwidth}
 \section*{Publications}
 \textbf{Sánchez-Navarro} et. al, 2022 \\ 
-Long-Read Metagenome-Assembled Genomes Improve Identification of Novel Complete Biosynthetic Gene Clusters in a Complex Microbial Activated Sludge Ecosystem. \textit{mSystems}. \href{https://doi.org/10.1128/msystems.00632-22}{10.1128/msystems.00632-22}
-\bigskip
+Long-Read Metagenome-Assembled Genomes Improve Identification of Novel Complete Biosynthetic Gene Clusters in a Complex Microbial Activated Sludge Ecosystem. \textit{mSystems}. 10.1128/msystems.00632-22 \href{https://doi.org/10.1128/msystems.00632-22}{\faExternalLink}
 
 
 \end{minipage}
 
-\section*{Coding Courses}
-\begin{tabular}{r|ccc}
-2019 & DataCamp Career Track: & \textbf{Data Scientist with R} \\
-2021 & DataCamp Career Track: & \textbf{Python Programmer} \\
+\section*{Shiny Apps}
+\begin{tabular}{rcl}
+gtdb-viz & \href{https://bs1f8f-robertosanchezn.shinyapps.io/gtdb-viz/}{\faExternalLink} & Interactive visualization of the  phylogenomic database GTDB \\
+in-dashboard & \href{https://bs1f8f-robertosanchezn.shinyapps.io/in-dashboard/}{\faExternalLink} & Simple BI dashboard mock-up for an university project. \\
 \end{tabular}
 \bigskip
 
@@ -206,13 +231,7 @@ Long-Read Metagenome-Assembled Genomes Improve Identification of Novel Complete 
 %----------------------------------------------------------------------------------------
 %	FINAL FOOTER
 %----------------------------------------------------------------------------------------
-\setlength{\parindent}{0pt}
-\begin{minipage}[t]{\rightcolwidth}
-\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
-{\small Roberto Sánchez Navarro \icon{\faEnvelopeO}{cvgreen}{} robertosan97@gmail.com \icon{\faMapMarker}{cvgreen}{} Spain \icon{\faPhone}{cvgreen}{} +34 644 902 167 
-}
-\end{center}
-\end{minipage}
+
 
 \end{paracol}
 
