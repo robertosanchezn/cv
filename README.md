@@ -1,3 +1,4 @@
 # CV 
 
-LaTeX CV based on the template [Simple Hipster CV](https://www.overleaf.com/latex/templates/simple-hipster-cv/cnpkkjdkyhhw) 
+Data Scienteist CV based on the LaTeX template [Simple Hipster CV](https://www.overleaf.com/latex/templates/simple-hipster-cv/cnpkkjdkyhhw) 
+
