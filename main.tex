@@ -2,7 +2,7 @@
 % https://www.latextemplates.com/template/twenty-seconds-resumecv
 % https://www.latextemplates.com/template/friggeri-resume-cv
 
-\documentclass[verylight]{simplehipstercv}
+\documentclass[darkhipster]{simplehipstercv}
 % available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
 % withoutsidebar
 \usepackage[utf8]{inputenc}
@@ -34,7 +34,7 @@
 
 \section*{Start}
 
-\simpleheader{headercolour}{Roberto}{Sánchez Navarro}{Bioinformatician - Data Analyst}{white}
+\simpleheader{headercolour}{Roberto}{Sánchez Navarro}{Data Scientist - Data Analyst}{white}
 
 
 
@@ -82,10 +82,12 @@
 \bg{cvgreen}{white}{About me}\\[0.5em]
 \vspace{0.5em}
 
-Bioinformatician looking for real-world challenges. 
+Data Scientist with a background in bioinformatics looking for real-world challenges. 
+
+\vspace{1em}
 
 I'm curious about the data, so I often take the extra step until it makes sense. Then, I like presenting it in a way that tells a story. 
-\vspace{2em}
+\vspace{1em}
 
 I'm continuously under training, learning new technologies every week, and when I pick one up, I enjoy passing that knowledge along to my peers. 
 
@@ -99,18 +101,31 @@ I'm continuously under training, learning new technologies every week, and when 
 
 Attentive to detail
 
+\vspace{0.5em}
 Focused on quality
+
+\vspace{0.5em}
 
 Good communicator
 
-Highly motivated   
+\vspace{0.5em}
+
+Highly motivated  
+
+\vspace{0.5em} 
 
 \bigskip
 
 \bg{cvgreen}{white}{Areas of specialization} \\[0.5em]
 \vspace{0.5em}
 
-Data Science ~•~ Data Analysis ~•~ Bioinformatics ~•~ Big Data
+Data Science 
+
+\vspace{0.5em} Data Analysis
+
+\vspace{0.5em} Bioinformatics 
+
+\vspace{0.5em} Big Data
 
 \bigskip
 
@@ -120,9 +135,13 @@ Data Science ~•~ Data Analysis ~•~ Bioinformatics ~•~ Big Data
 \vspace{0.5em}
 
  Running 
-~•~
+
+
+\vspace{0.5em}
  Cycling 
-~•~
+
+
+\vspace{0.5em}
  Hiking
 
 \vspace{3em}
@@ -143,21 +162,33 @@ Data Science ~•~ Data Analysis ~•~ Bioinformatics ~•~ Big Data
        Development of a python application for the detection and analysis of exopolysaccharide gene clusters in bacterial metagenomes. This entailed:
 
        \begin{itemize}
-           \item  Retrieving all exopolysaccharide clusters from the published literature and extracting all existing genetic knowledge about them. 
+           \item  Extensive retrieval of information from the published literature and collecting all existing genetic knowledge about the topic. 
 
-       \item  Development of a Snakemake pipeline that uses DIAMOND, hmmer, biopython, and visualization tools, among others, to mine public genome databases to collect sequence data to train models. 
-
-       \item  Exploratory analysis of these sequences using the phylogenetic python suite ete3 to redefine the classification of these clusters. 
+       \item  Development of a Snakemake pipeline to retrieve data for an in-depth exploratory analysis of these sequences. 
        
-       \item Using all this knowledge to develop de novo HMMs to be used in the new application. 
 
        \end{itemize}
+
+       This allowed me to develop the following data science skills: 
+       \begin{itemize}
+           \item Data wrangling in python using pandas, as well in-depth knowlege of the tidy framework in R, using dplyr and purrr's functional programming toolkit. 
+
+           \item Visualization in python using matplotlib, altair, and other libraries specialized in visualization  of biological data. In R, I mastered ggplot and its extensions for bioinformatics. 
+
+           \item Reporting with jupyter notebooks, RMarkdown, and dashboard development with Shiny. 
+           
+       \end{itemize}
+       
+       
+       
        }{aau.png} \\
-    \cvevent{2021--2022}{Research Assistant}{Aalborg University}{Denmark \color{cvred}}{Genome mining of metagenome-assembled genomes from wastewater treatment plants looking for biosynthetic gene clusters.}{aau.png}
+    \cvevent{2021--2022}{Research Assistant}{Aalborg University}{Denmark \color{cvred}}{Genome mining of metagenome-assembled genomes from wastewater treatment plants looking for biosynthetic gene clusters, achieving a publication as a first author: \textbf{Sánchez-Navarro et. al, 2022} \textit{mSystems}. 10.1128/msystems.00632-22 \href{https://doi.org/10.1128/msystems.00632-22}{\faExternalLink}
+    
+    }{aau.png}
 \end{tabular}
 \vspace{2em}
 
-\begin{minipage}[t]{0.45\textwidth}
+\begin{minipage}[t]{0.7\textwidth}
 \section*{Education}
 \begin{tabular}{r p{0.6\textwidth} c}
     \cvdegree{2023-2024}{Big Data Analysis}{MSc.}{University of Murcia }{}{umu.jpg} \\
@@ -166,26 +197,11 @@ Data Science ~•~ Data Analysis ~•~ Bioinformatics ~•~ Big Data
     \cvdegree{2017-2018}{Exchange Year}{ISEP}{University of Tennessee}{}{umu.jpg}
 \end{tabular}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.25\textwidth}
-\section*{Programming}
-\begin{tabular}{rc @{\hspace{0.5em}}l}
-     \bg{skilllabelcolour}{iconcolour}{R} &{4 years} & \barrule{0.2}{0.5em}{cvgreen} \\
-     \bg{skilllabelcolour}{iconcolour}{python} &{3 years} & \barrule{0.2}{0.5em}{cvgreen} \\
-     \bg{skilllabelcolour}{iconcolour}{bash} &{3 years} &  \barrule{0.17}{0.5em}{cvgreen}\\
-     \bg{skilllabelcolour}{iconcolour}{\LaTeX}& {4 years} & \barrule{0.14}{0.5em}{cvgreen} \\
-     \bg{skilllabelcolour}{iconcolour}{SQL}& {1 year\ } & \barrule{0.1}{0.5em}{cvgreen} \\
-\end{tabular}
-\end{minipage}
 
 \section*{Technical skills}
 \begin{tabular}{r|p{0.7\textwidth}}
    \textbf{Databases}           & MySQL ~•~ MongoDB ~•~ HBase~•~ Neo4j   \\
-   \textbf{Bioinformatics}      & NGS ~•~ (meta)genomics ~•~ genome mining \\
-   \textbf{Data Wrangling}      & pandas ~•~ dplyr ~•~ tidyr ~•~ purrr \\
-   \textbf{Visualization}       & matplotlib ~•~ plotly~•~ ggplot2 ~•~ ggiraph ~•~ Shiny \\
-   \textbf{Reporting}           & R Markdown ~•~ jupyter ~•~ Google colab ~•~ Quarto \\
    \textbf{Big Data}            & Hadoop ~•~ slurm ~•~ Spark ~•~ Snakemake \\
-   \textbf{Office Tools}        & Overleaf ~•~ Excel ~•~ PowerPoint ~•~ Slidy \\
    \textbf{DB Clients}          & sqlalchemy ~•~ pymongo ~•~ dbplyr ~•~ happybase \\
    \textbf{Machine Learning}    & caret ~•~ Keras ~•~ scikit-learn~•~ TensorFlow \\
    \textbf{Development}         & conda/mamba ~•~ Docker ~•~ Git \\
@@ -209,19 +225,18 @@ Data Science ~•~ Data Analysis ~•~ Bioinformatics ~•~ Big Data
 
 \end{minipage}\hfill
 \begin{minipage}[t]{0.37\textwidth}
-\section*{Publications}
-\textbf{Sánchez-Navarro} et. al, 2022 \\ 
-Long-Read Metagenome-Assembled Genomes Improve Identification of Novel Complete Biosynthetic Gene Clusters in a Complex Microbial Activated Sludge Ecosystem. \textit{mSystems}. 10.1128/msystems.00632-22 \href{https://doi.org/10.1128/msystems.00632-22}{\faExternalLink}
+\section*{Programming}
+\begin{tabular}{rc @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{R} &{4 years} & \barrule{0.4}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{python} &{3 years} & \barrule{0.3}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{bash} &{3 years} &  \barrule{0.3}{0.5em}{cvgreen}\\
+     \bg{skilllabelcolour}{iconcolour}{\LaTeX}& {4 years} & \barrule{0.4}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{SQL}& {1 year\ } & \barrule{0.1}{0.5em}{cvgreen} \\
+\end{tabular}
 
 
 \end{minipage}
 
-\section*{Shiny Apps}
-\begin{tabular}{rcl}
-gtdb-viz & \href{https://bs1f8f-robertosanchezn.shinyapps.io/gtdb-viz/}{\faExternalLink} & Interactive visualization of the  phylogenomic database GTDB \\
-in-dashboard & \href{https://bs1f8f-robertosanchezn.shinyapps.io/in-dashboard/}{\faExternalLink} & Simple BI dashboard mock-up for an university project. \\
-\end{tabular}
-\bigskip
 
 
 
